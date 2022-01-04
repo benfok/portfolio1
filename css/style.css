@@ -2,7 +2,7 @@
 :root {
     --bgcolor: #050515;
     --bg2color: #0e0e3f;
-    --hdrcolor: #050515;
+    --hdrcolor: #17171c;
     --navcolor: white;
     --fontmain:lightGrey;
     --sidecolor: #050515;
@@ -48,11 +48,12 @@ header {
     width: 40px;
     border-top: 2px solid var(--textstr);
     border-bottom: 2px solid var(--textstr);
-    padding: 3px 5px 3px 5px;
+    padding: 3px;
     vertical-align: middle;
     text-align: center;
     font-size: 30px;
     color: var(--textstr);
+    height: auto;
     
 }
 
@@ -173,7 +174,7 @@ p.intro-hello {
 }
 
 p.intro-sub {
-    font-size: 40px;
+    font-size: 35px;
     color: var(--fontmain); 
 }
 
@@ -193,8 +194,7 @@ h2 {
     color: var(--textstr);
     padding-bottom: 30px;
     margin-bottom: 20px;
-    font-family: 'Maiden Orange', cursive;
-    font-weight: 300;
+    text-align: center;
 }
 
 h2::after {
@@ -209,86 +209,26 @@ h2::after {
 }
 
 .about-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
 }
 
 .about-blurb {
-    flex: 1 0 100%;
-}
-
-.input {
-    position: absolute;
-    opacity: 0;
-}
-
-.label {
-    width: 100%;
-    padding: 20px 25px;
-    background: #e5e5e5;
-    border-radius: 10px 10px 0 0;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    transition: background 0.1s, color 0.1s;
-    margin-bottom: 30px;
-    border: solid 1px var(--linkcolor);
-    color: var(--linkcolor);
-    background-color: var(--hdrcolor);
-  }
-  
-.label:hover,
-.label:focus {
-    background-color: var(--linkcolor);
-    color: var(--hdrcolor);
-  }
-  
-        
-  
-.label:active,
-.input:checked + .label {
-    background: var(--bg2color);
-    color: var(--textstr);
-    z-index: 2;
-    border-bottom: var(--bg2color);
-}
-
-.panel {
-    padding: 60px 30px 0 30px;
-    background: var(--bg2color);
-    margin: 20px 0;
-    border-left: solid 1px var(--linkcolor);
-    border-top: solid 1px var(--linkcolor);
-    border-radius: 0 10px 10px 0;
-    line-height: 1.3;
-}
-
-#panel-2 {
-    position: absolute;
-    top: 18px;
-}
-
-#tab-2:checked + .label + .panel {
-    z-index: 1;
-
+    text-align: center;
 }
 
 .fig-profile {
-    flex: 1 0 30%;
-    padding: 0 30px 0 30px;
+    padding: 0;
+    display: flex;
 }
 
 .profile_pic {
-    float: right;
-    border-radius: 10%;
+    border-radius: 5%;
     width: 100%;
     max-width: 400px;
     min-width: 250px;
     height: auto;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin: 0 auto;
 }
 
 .work {
@@ -297,6 +237,14 @@ h2::after {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
+}
+
+.work-blurb {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 6px;
 }
 
 .first {
@@ -387,6 +335,12 @@ footer {
         display: none;
     }
 
+    .about-blurb,
+    .work-blurb {
+        width: 85%;
+        margin: auto;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -445,12 +399,29 @@ footer {
     transition: all 1s ease-in-out;
     }
 
+    .about-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
     .about-blurb {
-        flex: 1 0 40%;
+        flex: 1 0 45%;
+        text-align: left;
+        padding-right: 40px;
+        margin: 0;
+    }
+
+    .work-blurb {
+        text-align: left;
+        margin: 0;
     }
 
     h2 {
         font-size: 4.5vw;
+        text-align: left;
     }
 
     .contact-container {
@@ -491,19 +462,44 @@ footer {
         width: 70%;
     }
     
-   
-    h2 {
+       h2 {
         font-size: 4vw;
+    }
+
+    .fig-profile {
+        flex: 1 0 30%;
+        padding: 0 30px 0 30px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     section {
-        padding: 10vw 0 0 3vw;
+        padding: 5vw 0 0 3vw;
     }
 
     article {
         padding: 120px 50px 40px 50px;
+        margin: 0 0 0 150px;
+    }
+
+    h1 {
+        font-size: 150px;
+    }
+    
+    p.intro-hello {
+        font-size: 30px;
+    }
+    
+    p.intro-sub {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
     }
 
 }
