@@ -155,7 +155,7 @@ section {
 }
 
 h1 {
-    font-size: 15vw;
+    font-size: 110px;
     padding-bottom: 20px;
     color: var(--textstr);
     font-family: 'Maiden Orange', cursive;
@@ -167,13 +167,13 @@ p {
 }
 
 p.intro-hello {
-    font-size: 5vw;
+    font-size: 25px;
     color: var(--linkcolor); 
     padding-bottom: 20px;
 }
 
 p.intro-sub {
-    font-size: 9vw;
+    font-size: 40px;
     color: var(--fontmain); 
 }
 
@@ -202,16 +202,10 @@ h2::after {
     left: 0;
     content: "";
     height: 1px;
-    width: 0;
+    width: 100%;
     background: var(--navcolor);
     display: block;
     margin: 10px auto;
-}
-
-article:hover h2::after, 
-article:focus h2::after {
-    width: 100%;
-    transition: all 1s ease-in-out;
 }
 
 .about-container {
@@ -441,6 +435,16 @@ footer {
         padding: 20vw 3vw 0 10vw;
     }
 
+    h2::after {
+        width: 0;
+    }
+    
+    article:hover h2::after, 
+    article:focus h2::after {
+    width: 100%;
+    transition: all 1s ease-in-out;
+    }
+
     .about-blurb {
         flex: 1 0 40%;
     }
@@ -472,7 +476,7 @@ footer {
 
 @media screen and (min-width: 992px) {
     h1 {
-        font-size: 12vw;
+        font-size: 13vw;
     }
     
     p.intro-hello {
@@ -502,19 +506,4 @@ footer {
         padding: 120px 50px 40px 50px;
     }
 
-    h1 {
-        font-size: 10vw;
-    }
-    
-    p.intro-hello {
-        font-size: 2vw;
-    }
-    
-    p.intro-sub {
-        font-size: 4vw;
-    }
-  
-    h2 {
-        font-size: 3vw;
-    }
 }
