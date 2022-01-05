@@ -11,7 +11,7 @@ The repository in GitHub is [here](https://github.com/benfok/portfolio1)
 ## Screenshot
 Here is a screenshot of my finished page. Some key details and learnings are below.
 
-![Screenshot of my finished webpage](./images/screenshot-final2.png)
+![Screenshot of my finished webpage](./images/screenshot-final.png)
 
 ## Details and Learnings
 - Coding mobile-first was important for the scalability and resposiveness of the elements. This took some getting used to.
