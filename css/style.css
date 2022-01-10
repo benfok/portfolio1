@@ -512,7 +512,7 @@ footer {
 
     /* setting spacing and max article and font sizes for very wide screens */
     article {
-        padding: 120px 50px 40px 50px;
+        padding: 120px 50px 40px 80px;
         max-width: 1300px;
     }
 
