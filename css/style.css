@@ -620,4 +620,7 @@ footer {
         font-size: 18px;
     }
 
+    .contact-container {
+        padding-top: 8rem;
+    }
 }
