@@ -9,6 +9,7 @@
 
 let menuOpen = false;
 
+// toggle hidden status on the mobile menu icons and the menu upon click
 const toggleHidden = () => {
   document.querySelectorAll('.menu').forEach((icon) => {
     icon.classList.toggle('hidden');
@@ -16,11 +17,15 @@ const toggleHidden = () => {
   menuOpen === false ? menuOpen = true : menuOpen = false;
 };
 
+// event listener for menu icons
 document.querySelector('.icon').addEventListener('click', function() {
+  // toggle display status
   toggleHidden();
+  // delay to run closeMenu function 
   setTimeout(() => {if (menuOpen === true) {closeMenu();}}, 250);
 });
 
+// adds one time event listener to clicks outside the open menu in order to close it
 const closeMenu = () => {
   if (menuOpen === true) {  
     document.addEventListener('click', function(event){
