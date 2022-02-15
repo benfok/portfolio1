@@ -8,6 +8,13 @@ The deployed website can be found [here](https://benfok.github.io/portfolio1/)
 
 The repository in GitHub is [here](https://github.com/benfok/portfolio1)
 
+## Languages, Skills and Credits
+- HTML
+- CSS
+- JavaScript
+- FontAwesome for icons
+- Google Fonts
+
 ## Screenshot
 Here is a screenshot of my finished page. Some key details and learnings are below.
 
@@ -15,12 +22,17 @@ Here is a screenshot of my finished page. Some key details and learnings are bel
 
 ## Details and Learnings
 - Coding mobile-first was important for the scalability and resposiveness of the elements. This took some getting used to.
-- Without Javascript to code a mobile nav, I had to be creative with moving the Resume item button when the screen narrowed
+- Javascript with is used to code the mobile nav, in combination with CSS classes and moving the Resume button
 - display: flex was key in aligning elements responsively
 - The sidebar was fun to create, and then to move to the bottom of the page in a narrow view by changing the flex-direction
 - I enjoyed playing with hover effects to add some micro itneractions to the site. I realized the challenge of having these be relevant on smaller screens (touch screen) and so replaced some of the hover elements with permenant styles in this case
 - I used variables for the colors so I could code a 'light theme' for future toggling. Would also require switching out some icons
-- I used placeholder images and imaginary content for my work examples
 - Using viewport width for sizes of fonts and padding/margin in some areas was an interesting way to scale content responsively
 - Final sweep through code included ensure use of semantic HTML, indentation, quality comments and removal of redundant CSS
+
+## Future Additions
+- Add in a personal bio alongside professional
+- List skills
+- Color theme options
+- Micro interactions and transitions with mobile menu and images
 

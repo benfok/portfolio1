@@ -9,6 +9,7 @@
     --sidecolor: #17171c;
     --linkcolor:lightSkyBlue;
     --textstr: rgb(48, 218, 236);
+    --socialIcon: whitesmoke;
 }
 
 /* light theme */
@@ -57,7 +58,6 @@ header {
 }
 
 nav {
-    /* display: none; */
     color: var(--navcolor);
     background-color: var(--hdrcolor);
     font-size: 22px;
@@ -68,6 +68,7 @@ nav {
     z-index: 3;
     opacity: 90%;
     border-radius: 0 0 0 10px;
+    height: 100vh;
 }
 
 nav ul {
@@ -158,6 +159,7 @@ aside {
     transition: transform .7s ease-in-out;
     display: inline;
     margin: 15px;
+    color: var(--socialIcon);
 }
 
 /* micro animation for social links */
@@ -269,7 +271,7 @@ h2::after {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: 5rem;
 }
 
 .work-card {
@@ -287,17 +289,16 @@ h2::after {
 
 .work-pic {
     margin: 0 auto;
-    width: 100%;
+    width: 100%; 
     max-height: 500px;
-    border: solid 2px var(--navcolor);
+    border: solid 2px var(--bg2color);
+    border-radius: 5px;
     height: auto;
-    object-fit: cover;
-    object-position: center bottom;
 }
 
 figcaption {
     background-color: var(--bgcolor);
-    width: 95%;
+    width: 90%;
     flex: 1 0 100%;
     color: var(--fontmain);
     padding: 20px 0;
@@ -352,9 +353,10 @@ h3 {
 footer {
     text-align: center;
     background-color: var(--sidecolor);
-    padding: 10px;
+    padding-top: 50px;
     width: 100%;
     height: 80px;
+    font-size: 80%;
 }
 
 .hidden {
@@ -387,7 +389,7 @@ footer {
     nav {
         display: inline;
         padding: 0;
-        /* margin: auto; */
+        height: auto;
         position: relative;
         opacity: 100%;
         border-radius: 0;
@@ -470,6 +472,10 @@ footer {
         margin: 0 40px 0 30px;
     }
 
+    h2:last-of-type {
+        padding: 0 0 2rem 0;
+    }
+
     /* setting horizontal line under headings to become animation upon hovering over the article */
     h2::after {
         width: 0;
@@ -507,26 +513,6 @@ footer {
         text-align: left;
     }
 
-    /* contact elements layer horizontally instead of vertically */
-    .contact-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 100px;
-        padding-bottom: 100px;
-    }
-
-    .contact-p {
-        text-align: left;
-        padding: 0 20px 20px 0px;
-    }
-
-    .contact-info {
-        text-align: left;
-        padding: 0 20px 20px 0px;
-    }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -557,6 +543,42 @@ footer {
     .fig-profile {
         flex: 1 0 30%;
         padding: 0 30px 0 30px;
+    }
+
+    .work-card {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        gap: 30px;
+        padding-bottom: 1rem;
+    }
+
+    .work-pic-container {
+        flex: 1 0 45%;
+    }
+
+    figcaption {
+        flex: 1 0 45%;
+        padding: 0;
+    }
+
+    /* contact elements layer horizontally instead of vertically */
+    .contact-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        padding: 5rem 3vw 5rem 20vw;
+    }
+
+    .contact-p {
+        text-align: left;
+        padding: 0 20px 20px 0px;
+    }
+
+    .contact-info {
+        text-align: left;
+        padding: 0 20px 20px 0px;
     }
 }
 
@@ -595,7 +617,7 @@ footer {
     }
 
     p {
-        font-size: 22px;
+        font-size: 18px;
     }
 
 }
