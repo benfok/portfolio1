@@ -1,24 +1,25 @@
-/* dark theme */
-:root {
+/* default and dark theme */
+:root,
+:root.dark-theme {
     --bgcolor: #17171c;
     --bg2color: #050515;
     --hdrcolor: #17171c;
     --navcolor: white;
-    --fontmain:lightGrey;
+    --fontmain:rgb(207, 210, 211);
     --sidecolor: #17171c;
     --linkcolor:lightSkyBlue;
-    --textstr: turquoise;
+    --textstr: rgb(48, 218, 236);
 }
 
-/* light theme
-:root {
-    --bgcolor: white;
+/* light theme */
+/* :root.light-theme {
+    --bgcolor: rgb(255, 255, 255);
     --hdrcolor: white;
-    --navcolor: black;
-    --fontmain: darkGrey;
+    --navcolor: #30376A;
+    --fontmain: rgb(44, 44, 44);
     --sidecolor: white;
-    --linkcolor:rgb(33, 87, 189);
-    --textstr: darkBlue;
+    --linkcolor:#6d97e6;
+    --textstr: rgb(33, 179, 196);
 } */
 
 
@@ -29,20 +30,18 @@ body {
 
 header {
     width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     background-color: var(--hdrcolor);
-    padding: 5px 0;
+    padding: 10px;
 }
 
 
 .logo-container {
-    padding: 10px 5px 3px 10px;
-    flex: 1 0 50%;
-    height: 40px;
+    padding: 0;
+    flex: 1 0 20%;
 }
 
 .logo {
@@ -58,27 +57,33 @@ header {
 }
 
 nav {
+    /* display: none; */
     color: var(--navcolor);
+    background-color: var(--hdrcolor);
     font-size: 22px;
-    padding: 5px 0;
-    margin: auto;
-    flex: 1 0 50%;
+    padding: 70px 0 2rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 90%;
+    border-radius: 0 0 0 10px;
 }
 
 nav ul {
-    float: right;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: flex-end;
+    padding-top: 1rem;
 }
 
 nav li {
     display: inline;
     list-style: none;
     text-decoration: none;
-    margin: 10px 10px 10px 10px;
-    flex: 1 0 auto;
-    text-align: center;
+    margin: 1rem 25px 1rem 10rem;
+    flex: 1 0 100%;
+    text-align: right;
 }
 
 a {
@@ -86,9 +91,22 @@ a {
     color: var(--navcolor);
 }
 
-nav li a:hover,
-nav li a:focus {
+.menu-link {
+    display: block;
+    width: 100%;
+}
+
+.menu-link:hover,
+.menu-link:focus {
     color: var(--linkcolor);
+}
+
+.icon {
+    color: var(--textstr);
+    z-index: 3;
+    position: fixed;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 /* remove resume link from nav in < 768px view */
@@ -109,8 +127,10 @@ nav li a:focus {
 
 /* change button syling on hover */
 .button-link:hover,
-.button-link:focus {
-    background-color: var(--linkcolor);
+.button-link:focus,
+.icon:hover,
+.icon:active {
+    background-color: var(--textstr);
     color: var(--hdrcolor);
 }
 
@@ -151,7 +171,7 @@ section {
 }
 
 article {
-    padding: 50px 3vw 120px 3vw;
+    padding: 0 3vw 5rem 3vw;
     margin: 0 auto;
 }
 
@@ -166,6 +186,7 @@ article {
     background-image: url("desk-dark.png");
     background-size: cover;
     background-position: center;
+    padding-top: 4rem;
 }
 
 .profile-hs {
@@ -196,14 +217,14 @@ p.intro-hello {
 
 p.intro-sub {
     font-size: 30px;
-    color: var(--fontmain); 
+    color: white; 
 }
 
 
 h2 {
     font-size: 200%;
     color: var(--textstr);
-    padding-bottom: 30px;
+    padding: 4rem 0 2rem 0;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -330,26 +351,12 @@ footer {
     height: 80px;
 }
 
-/* narrowing nav items for very small screens to avoid wrap */
-@media screen and (min-width: 380px) {
-    nav li {
-        margin: 10px 20px 10px 20px;
-    }
+.hidden {
+    display: none !important;
 }
-
 
 @media screen and (min-width: 576px) {
     
-    /* move resume link from intro section to nav bar */
-    #resume,
-    #resume-nav {
-        display: inline;
-    }
-    
-    #resume-mobile {
-        display: none;
-    }
-
     .about-blurb,
     .work-blurb {
         width: 90%;
@@ -361,16 +368,55 @@ footer {
 @media screen and (min-width: 768px) {
     header {
         z-index: 2; /* to sit above aside */
-        flex-direction: row;
-        border-bottom: solid 5px var(--bgcolor);
     }
     
     /* logo positioning moves to in upper left */
     .logo-container {
         padding: 0;
-        margin: 5px 0 10px 20px;
+        margin: 5px 0 5px 10px;
         flex: 0 0 auto;
     }
+
+
+    nav {
+        display: inline;
+        padding: 0;
+        /* margin: auto; */
+        position: relative;
+        opacity: 100%;
+        border-radius: 0;
+        flex: 1 0 70%;
+    }
+    
+    nav ul {
+        float: right;
+        display: inline;
+        padding-top: 0;
+    }
+    
+    nav li {
+        margin: 10px 20px 10px 20px;
+        text-align: center;
+    }
+
+    .menu-link {
+        display: inline;
+    }
+    
+    .icon {
+        display: none;
+    }
+
+    /* move resume link from intro section to nav bar */
+    #resume,
+    #resume-nav {
+        display: inline;
+    }
+    
+    #resume-mobile {
+        display: none;
+    }
+
 
     /* styling sidebar to show to left of screen */
     aside {
