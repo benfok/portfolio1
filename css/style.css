@@ -292,7 +292,7 @@ h2::after {
     width: 100%; 
     max-height: 500px;
     border: solid 2px var(--bg2color);
-    border-radius: 5px;
+    border-radius: 10px;
     height: auto;
 }
 
@@ -554,6 +554,19 @@ footer {
 
     .work-pic-container {
         flex: 1 0 45%;
+    }
+
+    /* transitions from grayscale to color when hovering over the the card */
+    .work-pic {
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    }
+
+    .work-card:hover .work-pic {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
 
     figcaption {
