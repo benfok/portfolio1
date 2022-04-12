@@ -28,7 +28,7 @@
                 <li><a href="#about" class="menu-link">ABOUT</a></li>
                 <li><a href="#work" class="menu-link">WORK</a></li>
                 <li><a href="#contact" class="menu-link">CONTACT</a></li>
-                <li id="resume-nav"><a class="button-link" href="./files/resume_FOK_220215.pdf" id="resume" target="_blank">Resume</a></li>
+                <li id="resume-nav"><a class="button-link" href="./files/resume_FOK_220412.pdf" id="resume" target="_blank">Resume</a></li>
             </ul>
         </nav>
         <a href="javascript:void(0);" class="icon">
@@ -52,10 +52,10 @@
                 <p class="intro-hello">HI THERE. I'M</p>
                     <h1>Ben Fok</h1>
                     <p class="intro-sub"><strong>I bring ideas to life</strong></p>
-                    <a class="button-link" href="./files/resume_FOK_220215.pdf" id="resume-mobile" target="_blank">Resume</a>
+                    <a class="button-link" href="./files/resume_FOK_220412.pdf" id="resume-mobile" target="_blank">Resume</a>
                 </div>
             </article>
-            <article>
+            <article class="content-container">
                 <h2 id="about">ABOUT ME</h2>
                 <div class="about-container">
                     <div class="about-blurb">
@@ -82,77 +82,152 @@
                     </figure>
                 </div>
             </article>
-            <article>
+            <article class="content-container">
                 <h2 id="work">WORK</h2>
                 <p class="work-blurb">Take a walk through my tinkerings...</p> 
                 <div class="work-section">
-                    
-                    <figure class="work-card">
-                        <a href="https://benfok.github.io/pub-crawler/" target="_blank" class="work-pic-container">
-                            <img src="./images/pubcrawler.png" alt="Premier Project" class="work-pic">
-                        </a>
-                        <figcaption>
-                            <h3>PubCrawler</h3>
-                            <p class="sub">HTML | CSS | JavaScript | Rest API</p>
-                            <p>
-                               Returns optimized walking route between user defined locations.<br/><br/>
-                               User defines a search location and mapping API returns results and allows users to define a starting location, and add establishments to their pub crawl in any order.<br/><br/>
-                               Endpoint is configured to return the optimal order and walking route including manipulation of map marker styles and directional arrows.<br/><br/>
-                               Routes can be saved and reloaded for future reference.
-                            </p>
-                            <a class="button-link work-btn" href="https://benfok.github.io/pub-crawler/" target="_blank">Live</a>
-                            <a class="button-link work-btn" href="https://github.com/benfok/pub-crawler" target="_blank">Repo</a>
-                        </figcaption>
-                    </figure>              
-                    <figure class="work-card">
-                        <a href="https://benfok.github.io/weather-dashboard/" target="_blank" class="work-pic-container">
-                            <img src="./images/weather-dashboard3.png" alt="Premier Project" class="work-pic">
-                        </a>
-                        <figcaption>
-                            <h3>Weather Dashboard</h3>
-                            <p class="sub">HTML | CSS | JavaScript | Rest API</p>
-                            <p>
-                               Weather app to view current and 5 day forecast for selected locations.<br/><br/>
-                               User can search for worldwide city, town or neighborhood.<br/><br/>
-                               Time-offsets are used to ensure weather shown is accurate to current date and time at chosen location.
-                            </p>
-                            <a class="button-link work-btn" href="https://benfok.github.io/weather-dashboard/" target="_blank">Live</a>
-                            <a class="button-link work-btn" href="https://github.com/benfok/weather-dashboard" target="_blank">Repo</a>
-                        </figcaption>
-                    </figure>
-                    <figure class="work-card">
-                        <a href="https://benfok.github.io/code-quiz/" target="_blank" class="work-pic-container">
-                            <img src="./images/code_quiz.png" alt="Premier Project" class="work-pic">
-                        </a>
-                        <figcaption>
-                            <h3>Code Quiz</h3>
-                            <p class="sub">HTML | CSS | JavaScript</p>
-                            <p>
-                               Timed, 5 question quiz of Javascript questions.<br/><br/>
-                               Questions are randomly chosen from an array.<br/><br/>
-                               Incorrect answers deduct time from the clock. Final score is based on time remaining.<br/><br/>
-                               Scores are rendered to a leaderboard stored in the browser.
-                            </p>
-                            <a class="button-link work-btn" href="https://benfok.github.io/code-quiz/" target="_blank">Live</a>
-                            <a class="button-link work-btn" href="https://github.com/benfok/code-quiz" target="_blank">Repo</a>
-                        </figcaption>
-                    </figure>                 
-                    <figure class="work-card">
-                        <a href="https://benfok.github.io/day-organizer/" target="_blank" class="work-pic-container">
-                            <img src="./images/day-planner2.png" alt="Premier Project" class="work-pic">
-                        </a>
-                        <figcaption>
-                            <h3>Day Planner</h3>
-                            <p class="sub">HTML | CSS | JavaScript | JQuery | Moment.js</p>
-                            <p>
-                               Simple calendar app allowing users to save events onto timeblocks.<br/><br/>
-                               Future, current and past work hours an non-work hours render differently based on the current time and user defined work day parameters.<br/><br/>
-                               Events are saved and recalled as the data changes using CRUD methodology.
-                            </p>
-                            <a class="button-link work-btn" href="https://benfok.github.io/day-organizer/" target="_blank">Live</a>
-                            <a class="button-link work-btn" href="https://github.com/benfok/day-organizer" target="_blank">Repo</a>
-                        </figcaption>
-                    </figure>
+                    <div class="column">
+                        <figure class="work-card">
+                            <a href="https://the-happy-place-app.herokuapp.com/" target="_blank" class="work-pic-container">
+                                <img src="./images/happy-place1.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>The Happy Place</h3>
+                                <p class="sub">HTML | CSS | JavaScript | Node.js | Express | MySQL | Handlebars.js</p>
+                                <p>
+                                    Promoting mental wellbeing through a daily journal where users can post publically or privately. Intentionally free of "likes", comments and photos to ensure the focus is on your personal habits and daily gratitudes.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Contributed: Back-end Javascript, authentication, webserver config and custom RESTful API routes. Front-end Handlebars rendering and responsive CSS on all pages</li>
+                                        <li>MVC code structure. Routes to CRUD from MySQL DB</li>
+                                        <li>Implemented user authentication and sessions</li>
+                                        <li>Users can set flag to view all public posts or just their own</li>
+                                        <li>Deployed on Heroku with JAWSDB</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://the-happy-place-app.herokuapp.com/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/pub-crawler" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>     
+                        <figure class="work-card">
+                            <a href="https://benfok.github.io/pub-crawler/" target="_blank" class="work-pic-container">
+                                <img src="./images/pubcrawler.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>PubCrawler</h3>
+                                <p class="sub">HTML | CSS | JavaScript | APIs</p>
+                                <p>
+                                    Returns the optimized walking route between user selected locations in any city, town or neighbourhood to help you responsibly plan your pub crawl.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Contributed all front and back end Javascript</li>
+                                        <li>Integrated MapQuest API</li>
+                                        <li>Custom marker colors and map overlay</li>
+                                        <li>Browser storage for users to save routes</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://benfok.github.io/pub-crawler/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/pub-crawler" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>                       
+                        <figure class="work-card">
+                            <a href="https://tech-blog-tl.herokuapp.com/" target="_blank" class="work-pic-container">
+                                <img src="./images/tech-blog1.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>Tech Blog</h3>
+                                <p class="sub">HTML | CSS | JavaScript | Node.js | Express | MySQL | Handlebars.js</p>
+                                <p>
+                                    CMS-style blog site where users can publish their blog posts and comment on others.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Custom responsive CSS with Handlebars.js to render posts and comments</li>
+                                        <li>User authentication and sessions</li>
+                                        <li>Users can Create, Read, Update and Delete posts from the MySQL database</li>
+                                        <li>Follows MVC architectural structure, deployed on Heroku with JAWSDB</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://tech-blog-tl.herokuapp.com/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/tech-blog" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>              
+                    </div>
+                    <div class="column">
+                        <figure class="work-card">
+                            <a href="https://benfok.github.io/code-quiz/" target="_blank" class="work-pic-container">
+                                <img src="./images/code_quiz.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>Code Quiz</h3>
+                                <p class="sub">HTML | CSS | JavaScript</p>
+                                <p>
+                                    Timed, randomized quiz of Javascript questions.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Questions randomly rendered from an array</li>
+                                        <li>Incorrect answers deduct time from the clock</li>
+                                        <li>Intervals used to transition and show result for each question</li>
+                                        <li>User scores stored in the browser, sorted when recalled</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://benfok.github.io/code-quiz/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/code-quiz" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>    
+                        <figure class="work-card">
+                            <a href="https://benfok.github.io/weather-dashboard/" target="_blank" class="work-pic-container">
+                                <img src="./images/weather-dashboard3.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>Weather Dashboard</h3>
+                                <p class="sub">HTML | CSS | JavaScript | APIs</p>
+                                <p>
+                                    Weather app to view current and 5 day forecast anywhere worldwide.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Integrated OpenWeather API</li>
+                                        <li>Dynamic and responsive custom CSS</li>
+                                        <li>Working with timezone offsets</li>
+                                        <li>Browser storage used to save search history</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://benfok.github.io/weather-dashboard/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/weather-dashboard" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>             
+                        <figure class="work-card">
+                            <a href="https://benfok.github.io/day-organizer/" target="_blank" class="work-pic-container">
+                                <img src="./images/day-planner2.png" alt="Premier Project" class="work-pic">
+                            </a>
+                            <figcaption class="transparent">
+                                <h3>Day Planner</h3>
+                                <p class="sub">HTML | CSS | JavaScript | JQuery | Moment.js</p>
+                                <p>
+                                    Simple calendar app allowing users to save events onto timeblocks.
+                                </p>
+                                <i class="fa-solid fa-circle-chevron-up social-link card-icon"></i>
+                                <div class="work-description">
+                                    <ul>
+                                        <li>Moment.js for working with dates and times</li>
+                                        <li>User can customize work day and move between dates</li>
+                                        <li>User entries stored in the browser and persists as date is changed</li>
+                                    </ul>
+                                    <a class="button-link work-btn" href="https://benfok.github.io/day-organizer/" target="_blank">Live</a>
+                                    <a class="button-link work-btn" href="https://github.com/benfok/day-organizer" target="_blank">Repo</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>  
             </article>
             <article class="contact-container">

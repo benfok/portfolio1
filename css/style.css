@@ -5,7 +5,8 @@
     --bg2color: #050515;
     --hdrcolor: #17171c;
     --navcolor: whitesmoke;
-    --fontmain:rgb(207, 210, 211);
+    /* --fontmain:rgb(207, 210, 211); */
+    --fontmain: white;
     --sidecolor: #17171c;
     --linkcolor:lightSkyBlue;
     --textstr: rgb(48, 218, 236);
@@ -161,6 +162,7 @@ aside {
     display: inline;
     margin: 15px;
     color: var(--socialIcon);
+    cursor: pointer;
 }
 
 /* micro animation for social links */
@@ -175,7 +177,7 @@ section {
 }
 
 article {
-    padding: 0 3vw 5rem 3vw;
+    padding: 3rem 3vw 2rem 3vw;
     margin: 0 auto;
 }
 
@@ -255,7 +257,6 @@ h2::after {
 }
 
 .profile_pic {
-    border-radius: 5%;
     width: 100%;
     max-width: 400px;
     min-width: 250px;
@@ -273,7 +274,14 @@ h2::after {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 5rem;
+    gap: 4rem;
+}
+
+.column {
+    flex: 1 0 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
 }
 
 .work-card {
@@ -284,17 +292,31 @@ h2::after {
     align-items: center;
 }
 
+.work-description {
+    display: block;
+    padding-left: 2rem;
+}
+
+.work-description li {
+    line-height: 1.4;
+}
+
+.work-description ul {
+    padding-bottom: 20px;
+}
+
+.card-icon {
+    display: none !important;
+}
+
 .work-pic-container {
-    flex: 1 0 100%;
-    width: 95%;
+    width: 100%;
 }
 
 .work-pic {
     margin: 0 auto;
     width: 100%; 
-    max-height: 500px;
     border: solid 2px var(--bg2color);
-    border-radius: 10px;
     height: auto;
 }
 
@@ -305,6 +327,7 @@ figcaption {
     color: var(--fontmain);
     padding: 20px 0;
     font-size: 90%;
+    /* overflow: scroll; */
 }
 
 h3 {
@@ -373,6 +396,56 @@ footer {
         margin: auto;
     }
 
+    .work-section {
+        gap: 2rem;
+    }
+    
+    .column {
+        gap: 2rem;
+    }
+
+
+   figcaption {
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        opacity: 0.9;
+        background-color: var(--bgcolor);
+        padding: 2rem 2rem;
+        width: 100%;
+        transition: 1s ease;
+    }
+
+    .work-description {
+        display: none;
+    }
+
+    .transparent {
+        opacity: 0;
+        transition: 1s ease;
+        height:auto;
+    }
+
+    .displayed {
+        height: 100%;
+        transition: 1s ease;
+    }
+
+    .work-card:hover figcaption {
+        opacity: 0.9;
+    }
+
+    .work-card:hover .work-pic {
+        opacity: 0.8;
+    }
+
+    .card-icon {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        display: block !important;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -430,7 +503,6 @@ footer {
 
     /* styling sidebar to show to left of screen */
     aside {
-        /* background-color: var(--sidecolor); */
         height: 100vh;
         top: 0;
         z-index: 1; /* to sit above footer and below header */
@@ -468,6 +540,10 @@ footer {
         align-items: flex-start;
         text-align: left;
         padding-top: 200px;
+    }
+
+    .content-container {
+        margin: 0 4rem;
     }
 
     .profile-hs {
@@ -546,36 +622,7 @@ footer {
         flex: 1 0 30%;
         padding: 0 30px 0 30px;
     }
-
-    .work-card {
-        flex-flow: row nowrap;
-        align-items: flex-start;
-        gap: 30px;
-        padding-bottom: 1rem;
-    }
-
-    .work-pic-container {
-        flex: 1 0 45%;
-    }
-
-    /* transitions from grayscale to color when hovering over the the card */
-    .work-pic {
-    -webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-    }
-
-    .work-card:hover .work-pic {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0);
-    }
-
-    figcaption {
-        flex: 1 0 45%;
-        padding: 0;
-    }
-
+    
     /* contact elements layer horizontally instead of vertically */
     .contact-container {
         display: flex;
@@ -602,7 +649,7 @@ footer {
     /* setting spacing and max article and font sizes for very wide screens */
     article {
         padding: 120px 50px 40px 80px;
-        max-width: 1300px;
+        max-width: 1600px;
     }
 
     .intro-container {
@@ -635,7 +682,26 @@ footer {
         font-size: 18px;
     }
 
+    .content-container {
+        margin: 0;
+    }
+
+    .work-section {
+        gap: 10px;
+    }
+
+    .column {
+        flex: 1 0 46%;
+        gap: 10px;
+    }
+
     .contact-container {
         padding-top: 8rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .content-container {
+        margin: 0 8vw;
     }
 }

@@ -52,3 +52,24 @@ window.addEventListener('resize', showFullMenu);
 
 // and run on page load
 window.addEventListener('load', showFullMenu);
+
+// toggle the details overlay on the work cards
+const showHideWorkDetails = (event) => {
+  event.preventDefault();
+  console.dir(event.target);
+
+  if (event.target.parentElement.className === 'transparent') {
+    event.target.parentElement.className = 'displayed';
+    event.target.nextElementSibling.style.display = 'block';
+    event.target.style.transform = 'rotate(180deg)';
+  } else {
+    event.target.parentElement.className = 'transparent';
+    event.target.nextElementSibling.style.display = 'none';
+    event.target.style.transform = '';
+  }
+}
+
+document.querySelectorAll('.card-icon').forEach(elem => {
+  elem.addEventListener('click', showHideWorkDetails);
+})
+
